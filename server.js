@@ -11,7 +11,7 @@ app.use(cors({ origin: "*" }));
 app.use(express.json());
 app.use(bodyParser.json());
 
-mongoose.connect("mongodb://localhost:27017/todoApp", {
+mongoose.connect("mongodb+srv://prince1236598:Prince123456@cluster0.cdsu0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/todoApp", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
