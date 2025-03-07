@@ -7,7 +7,12 @@ const bcrypt = require("bcryptjs");
 const app = express();
 const PORT = 5000;
 
-app.use(cors({ origin: "*" }));
+app.use(cors({
+    origin: "https://todo-frontent.vercel.app", // Allow only your frontend
+    methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: "Content-Type,Authorization"
+}));
+
 app.use(express.json());
 app.use(bodyParser.json());
 
